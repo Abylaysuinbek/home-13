@@ -12,11 +12,11 @@ import javax.validation.constraints.NotNull;
 @Data
 public class PostDTO {
     private String postId;
-  @NotNull(message  = "ClientID can not be null")
+    @NotNull(message = "ClientID can not be null")
     private String clientId;
-  @NotNull(message  = "Post  Recipient Id can not be null")
+    @NotNull(message = "Post  Recipient Id can not be null")
     private String postRecipientId;
-  @NotNull(message  = "Post item can not be null")
+    @NotNull(message = "Post item can not be null")
     private String postItem;
     private String status;
 }

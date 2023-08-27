@@ -8,7 +8,7 @@ public interface PostService {
 
     void createPost(PostDTO postDTO);
 
-   List <PostDTO>  getAllPosts();
+    List<PostDTO> getAllPosts();
 
     PostDTO getPostById(String postId);
 

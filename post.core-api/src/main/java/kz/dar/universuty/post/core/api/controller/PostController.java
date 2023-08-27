@@ -14,33 +14,38 @@ import java.util.List;
 public class PostController {
 
     private final PostService postService;
+
     @GetMapping
-    public String check(){
-     return "post-core-api is working";
+    public String check() {
+        return "post-core-api is working";
 
     }
+
     @PostMapping
-    public void createPost(@RequestBody @Valid PostDTO postDTO){
+    public void createPost(@RequestBody @Valid PostDTO postDTO) {
 
     }
+
     @GetMapping("/all")
-    public List<PostDTO >getAllPosts(){
+    public List<PostDTO> getAllPosts() {
         return postService.getAllPosts();
 
     }
+
     @GetMapping("/postId")
-    public PostDTO getPostById(@PathVariable String postId){
+    public PostDTO getPostById(@PathVariable String postId) {
         return postService.getPostById(postId);
 
     }
+
     @PutMapping("/{postId}")
-    public void updatePostByid(@PathVariable String postId,@RequestBody PostDTO postDTO){
+    public void updatePostByid(@PathVariable String postId, @RequestBody PostDTO postDTO) {
         postDTO.setPostId(postId);
         postService.updatePostById(postDTO);
     }
 
-    @DeleteMapping ("{postId}")
-    public void deletePostById(@PathVariable String postId){
+    @DeleteMapping("{postId}")
+    public void deletePostById(@PathVariable String postId) {
         postService.deletePostById(postId);
 
     }
